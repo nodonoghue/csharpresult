@@ -1,4 +1,5 @@
 using System.Runtime.InteropServices.JavaScript;
+using ResultType.Models;
 
 namespace ResultType.BL;
 
@@ -6,13 +7,17 @@ public static class Logic
 {
     public static Models.Result<int> Divide(int numerator, int denominator)
     {
+        Models.Result<int> res;
+        
         if (denominator == 0)
         {
-            Exception exc = new DivideByZeroException(); 
-            return Models.Result<int>.Err(exc);
+            Exception exc = new DivideByZeroException();
+            res = Result<int>.Err(exc);
+            return res;
         }
         
         int result = numerator / denominator;
-        return Models.Result<int>.Ok(result);
+        res = Result<int>.Ok(result);
+        return res;
     }
 }

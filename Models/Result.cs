@@ -21,13 +21,13 @@ public class Result<T>
     public static Result<T> Ok(T value) => new(value);
     public static Result<T> Err(string error)
     {
-        Error err = new Error(error);
+        var err = new Error(error);
         return new Result<T>(err);
     }
 
     public static Result<T> Err(Exception error)
     {
-        Error err = new Error(error);
+        var err = new Error(error);
         return new Result<T>(err);
     }
 }
