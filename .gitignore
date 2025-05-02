@@ -22,11 +22,13 @@ bld/
 [Oo]bj/
 [Ll]og/
 [Ll]ogs/
+bin/
 
 # .NET Core
 project.lock.json
 project.fragment.lock.json
 artifacts/
+obj/
 
 # ASP.NET Scaffolding
 ScaffoldingReadMe.txt
@@ -52,3 +54,6 @@ CodeCoverage/
 *.VisualState.xml
 TestResult.xml
 nunit-*.xml
+
+# Editor configs
+.idea/
