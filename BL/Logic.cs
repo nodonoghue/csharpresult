@@ -5,9 +5,9 @@ namespace ResultType.BL;
 
 public static class Logic
 {
-    public static Models.Result<int> Divide(int numerator, int denominator)
+    public static Result<int> Divide(int numerator, int denominator)
     {
-        Models.Result<int> res;
+        Result<int> res;
         
         if (denominator == 0)
         {
