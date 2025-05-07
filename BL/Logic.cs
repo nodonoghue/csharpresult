@@ -1,4 +1,3 @@
-using System.Runtime.InteropServices.JavaScript;
 using ResultType.Models;
 
 namespace ResultType.BL;
@@ -13,6 +12,12 @@ public static class Logic
         {
             Exception exc = new DivideByZeroException();
             res = Result<int>.Err(exc);
+            return res;
+        }
+
+        if (denominator < 0)
+        {
+            res = Result<int>.Err("Denominator cannot be negative");
             return res;
         }
         
