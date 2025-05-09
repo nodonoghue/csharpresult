@@ -1,4 +1,4 @@
-﻿using ResultType.Models;
+using ResultType.Models;
 using ResultType.BL;
 
 Console.WriteLine("Starting result type demonstration terminal app...");
